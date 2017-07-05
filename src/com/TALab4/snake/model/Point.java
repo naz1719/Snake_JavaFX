@@ -1,12 +1,11 @@
 package com.TALab4.snake.model;
 
-import com.TALab4.snake.abstraction.PointAbstaction;
 import javafx.geometry.Bounds;
 
 /**
  * Created by khimin on 03.07.17.
  */
-public class Point implements PointAbstaction {
+public class Point {
     private int x;
     private int y;
 
@@ -23,13 +22,11 @@ public class Point implements PointAbstaction {
         this(0, 0);
     }
 
-    @Override
     public void translate(int xValue, int yValue) {
         x += xValue;
         y += yValue;
     }
 
-    @Override
     public boolean checkBounds(Bounds bounds) {
         return x >= bounds.getMinX() && y >= bounds.getMinY()
                 && x < bounds.getMaxX() && y < bounds.getMaxY();
